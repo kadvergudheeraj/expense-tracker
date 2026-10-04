@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Add a new expense to Expense Tracker.">
+	<title>Add Expense | Expense Tracker</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="script/script.js" defer></script>
+</head>
+<body>
+	<div class="app-shell">
+		<header class="topbar">
+			<a class="brand" href="dashboard.html" aria-label="Expense Tracker home">
+				<span class="brand-mark" aria-hidden="true">E</span>
+				<span>Expense<span class="brand-light">Tracker</span></span>
+			</a>
+
+			<nav class="main-nav" aria-label="Main navigation">
+				<a class="nav-link" href="dashboard.html">Dashboard</a>
+				<a class="nav-link" href="expenses.html">Expenses</a>
+				<a class="nav-link nav-add active" href="add-expense.html" aria-current="page"><span aria-hidden="true">+</span> Add Expense</a>
+			</nav>
+
+			<a class="logout-link" href="login.html"><span aria-hidden="true">↗</span> Logout</a>
+		</header>
+
+		<main class="dashboard">
+			<section class="page-heading" aria-labelledby="page-title">
+				<div>
+					<p class="eyebrow">KEEP YOUR RECORDS UP TO DATE</p>
+					<h1 id="page-title">Add expense</h1>
+					<p class="heading-note">Enter the details of your expense below.</p>
+				</div>
+			</section>
+
+			<section class="panel form-panel" aria-labelledby="form-title">
+				<div class="panel-heading">
+					<div>
+						<p class="eyebrow">NEW TRANSACTION</p>
+						<h2 id="form-title">Expense details</h2>
+					</div>
+				</div>
+				<p class="form-intro">Fields marked with <span class="required-mark">*</span> are required.</p>
+
+				<form class="expense-form" action="#" method="get">
+					<div class="form-grid">
+						<div class="form-field">
+							<label for="amount">Amount <span class="required-mark">*</span></label>
+							<div class="input-with-prefix">
+								<span class="input-prefix" aria-hidden="true">₹</span>
+								<input id="amount" name="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required>
+							</div>
+						</div>
+
+						<div class="form-field">
+							<label for="category">Category <span class="required-mark">*</span></label>
+							<select id="category" name="category" required>
+								<option value="" selected disabled>Select a category</option>
+								<option value="food">Food</option>
+								<option value="travel">Travel</option>
+								<option value="shopping">Shopping</option>
+								<option value="bills">Bills</option>
+								<option value="entertainment">Entertainment</option>
+								<option value="health">Health</option>
+								<option value="education">Education</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+
+						<div class="form-field form-field-wide">
+							<label for="description">Description</label>
+							<textarea id="description" name="description" rows="4" placeholder="What was this expense for?"></textarea>
+						</div>
+
+						<div class="form-field">
+							<label for="expense-date">Expense date <span class="required-mark">*</span></label>
+							<input id="expense-date" name="expense-date" type="date" required>
+						</div>
+					</div>
+
+					<div class="form-actions">
+						<a class="form-button form-button-secondary" href="dashboard.html">Cancel</a>
+						<button class="form-button form-button-primary" type="submit">Submit Expense</button>
+					</div>
+				</form>
+			</section>
+
+			<footer class="page-footer">Expense Tracker <span>·</span> Your finances, at a glance</footer>
+		</main>
+	</div>
+</body>
+</html>

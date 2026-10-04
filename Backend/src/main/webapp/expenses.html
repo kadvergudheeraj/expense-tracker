@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="View and filter your expenses in Expense Tracker.">
+	<title>All Expenses | Expense Tracker</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="script/script.js" defer></script>
+</head>
+<body>
+	<div class="app-shell">
+		<header class="topbar">
+			<a class="brand" href="dashboard.html" aria-label="Expense Tracker home">
+				<span class="brand-mark" aria-hidden="true">E</span>
+				<span>Expense<span class="brand-light">Tracker</span></span>
+			</a>
+
+			<nav class="main-nav" aria-label="Main navigation">
+				<a class="nav-link" href="dashboard.html">Dashboard</a>
+				<a class="nav-link active" href="view-expenses" aria-current="page">Expenses</a>
+				<a class="nav-link nav-add" href="add-expense.html"><span aria-hidden="true">+</span> Add Expense</a>
+			</nav>
+
+			<a class="logout-link" href="/expense-tracker/logout"><span aria-hidden="true">↗</span> Logout</a>
+		</header>
+
+		<main class="dashboard">
+			<section class="page-heading expense-page-heading" aria-labelledby="page-title">
+				<div>
+					<p class="eyebrow">YOUR SPENDING HISTORY</p>
+					<h1 id="page-title">All Expenses</h1>
+					<p class="heading-note">Browse and review your recorded expenses.</p>
+				</div>
+				<a class="form-button form-button-primary" href="add-expense.html">+ Add Expense</a>
+			</section>
+
+			<section class="panel expense-filters" aria-label="Expense filters">
+				<div class="filter-grid">
+					<div class="filter-field">
+						<label for="expense-search">Search expenses</label>
+						<input id="expense-search" type="search" placeholder="Search description or category">
+					</div>
+					<div class="filter-field">
+						<label for="category-filter">Category</label>
+						<select id="category-filter">
+							<option>All Categories</option>
+							<option>Food</option>
+							<option>Travel</option>
+							<option>Shopping</option>
+							<option>Bills</option>
+							<option>Entertainment</option>
+							<option>Health</option>
+							<option>Education</option>
+							<option>Other</option>
+						</select>
+					</div>
+					<div class="filter-field">
+						<label for="date-filter">Date</label>
+						<input id="date-filter" type="date">
+					</div>
+				</div>
+			</section>
+
+			<section class="panel expenses-panel" aria-labelledby="expenses-table-title">
+				<div class="panel-heading">
+					<div>
+						<p class="eyebrow">TRANSACTION HISTORY</p>
+						<h2 id="expenses-table-title">Expenses</h2>
+					</div>
+					<span class="record-count">8 records</span>
+				</div>
+				<div class="table-wrap">
+					<table class="expenses-table">
+						<thead>
+							<tr>
+								<th scope="col">Category</th>
+								<th scope="col">Description</th>
+								<th scope="col">Amount</th>
+								<th scope="col">Date</th>
+								<th scope="col">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="category-label"><span class="category-dot dot-food"></span>Food</span></td>
+								<td class="description-cell">Weekly groceries</td>
+								<td class="amount-cell">₹86.45</td>
+								<td class="date-cell">Oct 12, 2026</td>
+								<td class="row-actions"><button type="button" aria-label="Edit Weekly groceries">Edit</button><button type="button" aria-label="Delete Weekly groceries">Delete</button></td>
+							</tr>
+							<tr>
+								<td><span class="category-label"><span class="category-dot dot-travel"></span>Travel</span></td>
+								<td class="description-cell">Monthly transit pass</td>
+								<td class="amount-cell">₹64.00</td>
+								<td class="date-cell">Oct 10, 2026</td>
+								<td class="row-actions"><button type="button" aria-label="Edit Monthly transit pass">Edit</button><button type="button" aria-label="Delete Monthly transit pass">Delete</button></td>
+							</tr>
+							<tr>
+								<td><span class="category-label"><span class="category-dot dot-bills"></span>Bills</span></td>
+								<td class="description-cell">Electricity bill</td>
+								<td class="amount-cell">₹92.80</td>
+								<td class="date-cell">Oct 08, 2026</td>
+								<td class="row-actions"><button type="button" aria-label="Edit Electricity bill">Edit</button><button type="button" aria-label="Delete Electricity bill">Delete</button></td>
+							</tr>
+							<tr>
+								<td><span class="category-label"><span class="category-dot dot-shopping"></span>Shopping</span></td>
+								<td class="description-cell">New headphones</td>
+								<td class="amount-cell">₹129.99</td>
+								<td class="date-cell">Oct 06, 2026</td>
+								<td class="row-actions"><button type="button" aria-label="Edit New headphones">Edit</button><button type="button" aria-label="Delete New headphones">Delete</button></td>
+							</tr>
+							<tr>
+								<td><span class="category-label"><span class="category-dot dot-leisure"></span>Entertainment</span></td>
+								<td class="description-cell">Cinema tickets</td>
+								<td class="amount-cell">₹32.50</td>
+								<td class="date-cell">Oct 05, 2026</td>
+								<td class="row-actions"><button type="button" aria-label="Edit Cinema tickets">Edit</button><button type="button" aria-label="Delete Cinema tickets">Delete</button></td>
+							</tr>
+							<tr>
+								<td><span class="category-label"><span class="category-dot dot-health"></span>Health</span></td>
+								<td class="description-cell">Pharmacy</td>
+								<td class="amount-cell">₹18.75</td>
+								<td class="date-cell">Oct 04, 2026</td>
+								<td class="row-actions"><button type="button" aria-label="Edit Pharmacy">Edit</button><button type="button" aria-label="Delete Pharmacy">Delete</button></td>
+							</tr>
+							<tr>
+								<td><span class="category-label"><span class="category-dot dot-education"></span>Education</span></td>
+								<td class="description-cell">Online course</td>
+								<td class="amount-cell">₹49.00</td>
+								<td class="date-cell">Oct 02, 2026</td>
+								<td class="row-actions"><button type="button" aria-label="Edit Online course">Edit</button><button type="button" aria-label="Delete Online course">Delete</button></td>
+							</tr>
+							<tr>
+								<td><span class="category-label"><span class="category-dot dot-food"></span>Food</span></td>
+								<td class="description-cell">Coffee with a friend</td>
+								<td class="amount-cell">₹12.25</td>
+								<td class="date-cell">Oct 01, 2026</td>
+								<td class="row-actions"><button type="button" aria-label="Edit Coffee with a friend">Edit</button><button type="button" aria-label="Delete Coffee with a friend">Delete</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<footer class="page-footer">Expense Tracker <span>·</span> Your finances, at a glance</footer>
+		</main>
+	</div>
+</body>
+</html>
