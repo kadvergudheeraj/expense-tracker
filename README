@@ -1,0 +1,46 @@
+# Personal Expense Tracker
+
+## About the Project
+Personal Expense Tracker is a web-based application developed to help users record, categorize, and manage their income and expenses. It provides expense tracking, transaction filtering, and balance summaries.
+
+## Technologies Used
+- **Backend:** Java, JDBC, Servlets, JSP
+- **Database:** MySQL
+- **Frontend:** HTML, CSS, JavaScript
+- **Build Tool:** Maven
+
+## Features
+- User registration and login
+- Add and manage income and expenses
+- CRUD operations for expense records
+- Store and retrieve transaction data using MySQL
+- Filter and view transactions
+- Display expense summaries and balance information
+
+## Project Structure
+- `model` – User and expense model classes
+- `dao` – Database operations
+- `servlet` – Request handling and application logic
+- `util` – Database connection utilities
+- `webapp` – Frontend pages and JSP files
+
+## Setup and Installation
+1. Clone or download this repository.
+2. Import the project into Eclipse or another Java IDE as a Maven project.
+3. Create a MySQL database and configure the database connection in `DBConnection.java`.
+4. Update the database credentials in the configuration.
+5. Build the project using Maven.
+6. Deploy the generated WAR file to a compatible servlet container, such as Apache Tomcat.
+7. Open the application in your browser.
+
+## Learning Outcomes
+- Java web application development
+- JDBC and MySQL integration
+- CRUD operations
+- MVC-style application structure
+- Maven project management
+
+## Author
+**Dheeraj Kadvergu**
+
+GitHub: https://github.com/27172
